@@ -1,4 +1,19 @@
-import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event'
+// Resize event utilities for Element Plus
+const addResizeListener = (element, fn) => {
+  if (element.attachEvent) {
+    element.attachEvent('onresize', fn)
+  } else {
+    element.addEventListener('resize', fn)
+  }
+}
+
+const removeResizeListener = (element, fn) => {
+  if (element.detachEvent) {
+    element.detachEvent('onresize', fn)
+  } else {
+    element.removeEventListener('resize', fn)
+  }
+}
 
 /**
  * How to use
