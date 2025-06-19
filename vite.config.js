@@ -39,5 +39,12 @@ export default defineConfig({
       },
     },
   },
-
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // 确保 SCSS 可以解析 @ 别名
+        additionalData: `$injectedColor: orange;`
+      }
+    }
+  }
 })
