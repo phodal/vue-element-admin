@@ -9,7 +9,7 @@ import CodeMirror from 'codemirror'
 import 'codemirror/addon/lint/lint.css'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/rubyblue.css'
-require('script-loader!jsonlint')
+import 'jsonlint'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/addon/lint/lint'
 import 'codemirror/addon/lint/json-lint'
@@ -59,19 +59,17 @@ export default {
   height: 100%;
   position: relative;
 
-  ::v-deep {
-    .CodeMirror {
-      height: auto;
-      min-height: 300px;
-    }
+  :deep(.CodeMirror) {
+    height: auto;
+    min-height: 300px;
+  }
 
-    .CodeMirror-scroll {
-      min-height: 300px;
-    }
+  :deep(.CodeMirror-scroll) {
+    min-height: 300px;
+  }
 
-    .cm-s-rubyblue span.cm-string {
-      color: #F08047;
-    }
+  :deep(.cm-s-rubyblue span.cm-string) {
+    color: #F08047;
   }
 }
 </style>
