@@ -1,9 +1,9 @@
-import Vue from 'vue'
 import SvgIcon from '@/components/SvgIcon'// svg component
 
-// register globally
-Vue.component('svg-icon', SvgIcon)
+// register globally - this will be handled by the app instance in main.js
+export { SvgIcon }
 
-const req = require.context('./svg', false, /\.svg$/)
-const requireAll = requireContext => requireContext.keys().map(requireContext)
-requireAll(req)
+// Import all svg files
+const modules = import.meta.glob('./svg/*.svg', { eager: true })
+const requireAll = () => Object.keys(modules).map(key => modules[key])
+requireAll()
