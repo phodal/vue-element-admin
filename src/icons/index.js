@@ -1,4 +1,4 @@
-import SvgIcon from '@/components/SvgIcon'// svg component
+import SvgIcon from '@/components/SvgIcon/index.vue'// svg component
 
 // register globally - this will be handled by the app instance in main.js
 export { SvgIcon }
