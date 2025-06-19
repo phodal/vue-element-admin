@@ -15,6 +15,7 @@ import store from './store'
 import router from './router'
 
 import './icons' // icon
+import { SvgIcon } from './icons' // svg icon component
 import './permission' // permission control
 import './utils/error-log' // error log
 
@@ -42,6 +43,9 @@ app.use(ElementPlus, {
 
 app.use(store)
 app.use(router)
+
+// register global components
+app.component('svg-icon', SvgIcon)
 
 // register global utility filters as global properties
 Object.keys(filters).forEach(key => {
