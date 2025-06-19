@@ -5,7 +5,6 @@ import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import './styles/element-variables.scss'
 import enLang from 'element-plus/es/locale/lang/en'
 
 import '@/styles/index.scss' // global css
